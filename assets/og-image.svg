@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#1C1917"/>
+      <stop offset="100%" stop-color="#0F0E0D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#B8945F"/>
+      <stop offset="100%" stop-color="#7A1515"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Gold divider dots -->
+  <circle cx="80" cy="80" r="3" fill="#B8945F"/>
+  <circle cx="100" cy="80" r="3" fill="#B8945F" opacity="0.6"/>
+  <circle cx="120" cy="80" r="3" fill="#B8945F" opacity="0.3"/>
+
+  <!-- Eyebrow -->
+  <text x="80" y="160"
+        font-family="'Inter', system-ui, sans-serif"
+        font-size="22"
+        font-weight="500"
+        letter-spacing="6"
+        fill="#B8945F">EUROPEAN BEAUTY Ã CHINA COMMERCE</text>
+
+  <!-- Main wordmark -->
+  <g font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif"
+     font-size="180"
+     font-weight="600"
+     letter-spacing="12">
+    <text x="80" y="340" fill="#FAF7F2">BELL</text>
+    <text x="540" y="340" fill="url(#accent)" font-weight="700">A</text>
+    <text x="670" y="340" fill="#FAF7F2">RIA</text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="80" y="430"
+        font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif"
+        font-style="italic"
+        font-size="48"
+        fill="#FAF7F2">Your European Brand. Made Ready for China.</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="490" x2="260" y2="490" stroke="#B8945F" stroke-width="2"/>
+
+  <!-- Footer endorsement -->
+  <text x="80" y="540"
+        font-family="'Inter', system-ui, sans-serif"
+        font-size="18"
+        font-weight="400"
+        letter-spacing="2"
+        fill="#C4B79A">POWERED BY LIANWEI DIGITAL GROUP</text>
+
+  <text x="80" y="570"
+        font-family="'Inter', system-ui, sans-serif"
+        font-size="14"
+        font-weight="400"
+        letter-spacing="3"
+        fill="#7A6D5C">25 YEARS  Â·  1,200+ EXPERTS  Â·  200+ GLOBAL BRANDS</text>
+
+  <!-- Right decorative -->
+  <text x="1120" y="570"
+        text-anchor="end"
+        font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif"
+        font-style="italic"
+        font-size="22"
+        fill="#7A6D5C">Shanghai Â· Paris Â· Milan</text>
+</svg>
