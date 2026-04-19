@@ -185,8 +185,8 @@ button:focus-visible, a:focus-visible { outline-offset: 4px; }
 .hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 .hero-image {
   position: absolute; inset: 0;
-  background-image: linear-gradient(135deg, rgba(250,247,242,0.82) 0%, rgba(250,247,242,0.55) 45%, rgba(250,247,242,0.15) 100%),
-    url('https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=1920&q=80');
+  background-image: linear-gradient(135deg, rgba(250,247,242,0.88) 0%, rgba(250,247,242,0.60) 40%, rgba(28,25,23,0.18) 100%),
+    url('https://images.unsplash.com/photo-1617220376087-37ff2b867a4f?auto=format&fit=crop&w=1920&q=85');
   background-size: cover;
   background-position: center right;
   will-change: transform;
@@ -1027,6 +1027,69 @@ html[data-lang="zh"] [data-zh] { display: initial; }
 html[data-lang="zh"] [data-zh-block] { display: block; }
 [data-en-block], [data-zh-block] { display: block; }
 html[data-lang="en"] [data-zh-block] { display: none; }
+
+/* ============================================
+   MOBILE REFINEMENTS (polish for ≤768px)
+   ============================================ */
+@media (max-width: 768px) {
+  /* Tighter container + section rhythm so content fills the viewport */
+  .container { padding: 0 20px; }
+  section { padding: clamp(56px, 10vw, 96px) 0; }
+  .section-head { margin-bottom: 32px; max-width: 100%; }
+  .section-title { font-size: clamp(28px, 6.5vw, 40px); line-height: 1.15; letter-spacing: -0.01em; }
+  html[data-lang="zh"] .section-title { font-size: clamp(26px, 6vw, 36px); line-height: 1.25; }
+  .section-lead { font-size: 14.5px; line-height: 1.65; }
+  .section-label { font-size: 10px; letter-spacing: 0.22em; margin-bottom: 18px; }
+  .section-label::after, .section-head.center .section-label::before { width: 28px; }
+
+  /* ABOUT — tighter entity cards, inline stats stay readable */
+  .about-grid { gap: 14px; }
+  .entity { padding: 28px 22px; }
+  .entity h3 { font-size: 22px; margin-bottom: 14px; }
+  .entity p { font-size: 14.5px; }
+  .entity-tag { font-size: 10px; padding: 5px 12px; margin-bottom: 16px; }
+  .entity-stats { gap: 16px; margin-top: 24px; padding-top: 20px; }
+  .entity-stats .num { font-size: 26px; }
+  .entity-stats .lab { font-size: 10px; }
+
+  /* COMPLIANCE — 2 cols below 768 so names don't cramp */
+  .compliance-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .cert { padding: 18px 12px; }
+
+  /* INSIGHTS — shorter hero image, tighter card body */
+  .insight-img { height: 180px; }
+  .insight-body { padding: 22px 20px; }
+  .insight h5 { font-size: 18px; margin-bottom: 12px; }
+  .insight p { font-size: 13.5px; margin-bottom: 16px; }
+
+  /* CONTACT — form goes single-column here (not at 560) so 2-col pairs don't squish */
+  .contact-grid { gap: 40px; }
+  .form-row { grid-template-columns: 1fr; gap: 20px; }
+  .lead-form input, .lead-form select, .lead-form textarea { font-size: 16px; /* avoid iOS zoom */ padding: 10px 0; }
+  .submit-btn {
+    justify-self: stretch;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 28px;
+    font-size: 13px;
+  }
+  .contact-info { padding-top: 0; }
+  .info-block { margin-bottom: 28px; }
+  .info-block h5 { font-size: 10px; letter-spacing: 0.2em; }
+  .info-block p { font-size: 14.5px; }
+
+  /* Nav "Book a Call" in the mobile menu reads cleaner when it spans the tap area */
+  .nav-links .btn-cta { min-width: 200px; text-align: center; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 18px; }
+  .section-title { font-size: clamp(24px, 7vw, 32px); }
+  html[data-lang="zh"] .section-title { font-size: clamp(22px, 6.5vw, 30px); }
+  .entity { padding: 24px 18px; }
+  .insight-img { height: 160px; }
+  .insight-body { padding: 20px 18px; }
+}
 
 /* ============================================
    PRINT
