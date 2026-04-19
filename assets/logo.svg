@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 48" width="320" height="48" role="img" aria-label="Bellaria">
+  <title>Bellaria</title>
+  <style>
+    .bell, .ria { fill: #1C1917; font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; font-weight: 600; letter-spacing: 8px; }
+    .a         { fill: #7A1515; font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; font-weight: 700; letter-spacing: 8px; }
+    .sub       { fill: #1C1917; font-family: 'Inter', system-ui, sans-serif; font-size: 8px; letter-spacing: 4px; }
+  </style>
+  <text class="bell" x="0"   y="32" font-size="34">BELL</text>
+  <text class="a"    x="102" y="32" font-size="34">A</text>
+  <text class="ria"  x="138" y="32" font-size="34">RIA</text>
+  <text class="sub"  x="0"   y="46">EUROPEAN BRANDS Â· MADE READY FOR CHINA</text>
+</svg>
