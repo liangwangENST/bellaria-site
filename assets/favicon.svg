@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="10" fill="#FAF7F2"/>
+  <text x="32" y="44"
+        text-anchor="middle"
+        font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif"
+        font-weight="700"
+        font-size="42"
+        fill="#7A1515">B</text>
+  <circle cx="52" cy="16" r="3" fill="#B8945F"/>
+</svg>
