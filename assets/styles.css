@@ -158,16 +158,27 @@ button:focus-visible, a:focus-visible { outline-offset: 4px; }
 @media (max-width: 900px) {
   .mobile-toggle { display: flex; }
   .nav-links {
-    position: fixed; inset: 0; top: 0;
-    flex-direction: column; justify-content: center; align-items: center;
-    gap: 24px; padding: 80px 32px 40px;
-    background: var(--ivory); z-index: 101;
-    transform: translateY(-100%); transition: transform 0.4s var(--ease);
+    /* Fully hidden when closed — no translateY hack, bulletproof across iOS/Android */
+    display: none;
   }
-  .nav-links.open { transform: translateY(0); }
+  .nav-links.open {
+    display: flex;
+    position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+    flex-direction: column; justify-content: flex-start; align-items: center;
+    gap: 28px; padding: 96px 32px 48px;
+    background: var(--ivory); z-index: 101;
+    overflow-y: auto;
+    animation: navFadeIn 0.28s var(--ease);
+  }
   .nav-links a { font-size: 22px; font-family: 'Cormorant Garamond', serif; font-weight: 500; }
   html[data-lang="zh"] .nav-links a { font-family: 'Noto Serif SC', serif; font-weight: 600; }
+  .nav-links .lang-switch { margin-top: 4px; }
   .nav-links .btn-cta { font-size: 14px; margin-top: 12px; padding: 14px 28px; }
+  body.nav-open { overflow: hidden; }
+}
+@keyframes navFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ============================================
@@ -1081,6 +1092,26 @@ html[data-lang="en"] [data-zh-block] { display: none; }
 
   /* Nav "Book a Call" in the mobile menu reads cleaner when it spans the tap area */
   .nav-links .btn-cta { min-width: 200px; text-align: center; justify-content: center; }
+
+  /* HERO — on mobile, push the portrait to the right edge and strengthen the cream
+     wash so the model's face doesn't compete with the H1 text */
+  .hero-image {
+    background-position: 92% center;
+    background-image:
+      linear-gradient(to right,
+        rgba(250,247,242,0.98) 0%,
+        rgba(250,247,242,0.92) 45%,
+        rgba(250,247,242,0.70) 70%,
+        rgba(250,247,242,0.35) 90%,
+        rgba(250,247,242,0.10) 100%),
+      url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=85');
+  }
+
+  /* MARQUEE — slow the scroll down on mobile so it doesn't race past */
+  .marquee { padding: 16px 0; }
+  .marquee-track { animation-duration: 140s; gap: 24px; }
+  .marquee-item { font-size: 16px; }
+  .marquee-sep { font-size: 11px; }
 }
 
 @media (max-width: 480px) {
