@@ -1012,7 +1012,7 @@ html[data-lang="zh"] .quote p { font-style: normal; font-weight: 500; line-heigh
   transform: translateY(32px);
   transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
-.fade-in.visible {
+.fade-in.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
