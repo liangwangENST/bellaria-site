@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block hosted preview
+User-agent: *
+Disallow: /_vercel/
+
+Sitemap: https://bellaria.com/sitemap.xml
