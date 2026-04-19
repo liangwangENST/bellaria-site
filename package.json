@@ -1,0 +1,23 @@
+{
+  "name": "bellaria-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bellaria â European brands, made ready for China. Static marketing site for Shanghai Shiyu Ã Lianwei Digital Group.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev":     "npx --yes serve . -l 3000",
+    "preview": "npx --yes serve . -l 3000",
+    "deploy":  "npx --yes vercel --prod"
+  },
+  "keywords": [
+    "bellaria",
+    "european-brands",
+    "china-ecommerce",
+    "lianwei",
+    "shanghai-shiyu",
+    "tmall-partner"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
